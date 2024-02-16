@@ -86,3 +86,17 @@ print(error_ratio.sort_values())
 france_data = test[test["team"]=="FRA"]\
 
 print(france_data)
+# Plotting actual vs predicted values
+plt.figure(figsize=(10, 6))
+plt.scatter(test["medals"], test["predictions"], color='blue', label='Actual vs Predicted Medals')
+plt.plot(test["medals"], test["medals"], color='red', linestyle='--', label='Perfect Prediction')
+
+# Adding labels and title
+plt.title('Actual vs Predicted Medals')
+plt.xlabel('Actual Medals')
+plt.ylabel('Predicted Medals')
+plt.legend()
+plt.grid(True)
+
+# Show plot
+plt.show()
