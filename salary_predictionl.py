@@ -42,7 +42,7 @@ y_predict = reg.predict(x_test)
 from sklearn.metrics import mean_squared_error
 
 err = mean_squared_error(y_test,y_predict)
-print("Mean Squared Error (Polynomial Regression - Degree 2):", err)
+print("Mean Squared Error (Polynomial Regression - Degree 3):", err)
 
 comparison = pd.DataFrame({"Actual": y_test, "Predicted": y_predict})
 print(comparison.head())
@@ -51,10 +51,11 @@ plt.figure(figsize=(10, 6))
 plt.scatter(x_test[:,1],y_test,c= "r",label = "actual")
 plt.scatter(x_test[:,1],y_predict,c="b",label="predicted")
 
-plt.title("Actual vs. Predicted Salary (Polynomial Regression - Degree 2)")
+plt.title("Actual vs. Predicted Salary (Polynomial Regression - Degree 3)")
 plt.xlabel("Years of Experience")
 plt.ylabel("Salary")
 plt.legend()
 plt.show()
+
 
 
