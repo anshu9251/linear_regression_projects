@@ -1,7 +1,7 @@
 import pandas as pd
 
-file_path = r"D:\teams.csv"  # Use raw string literal to avoid issues with backslashes
-delimiter = ","  # Assuming the file is tab-delimited. Change to "," if comma-delimited.
+file_path = r"D:\teams.csv" 
+delimiter = "," 
 
 teams= pd.read_csv(file_path, delimiter=delimiter)
 #print(data)
